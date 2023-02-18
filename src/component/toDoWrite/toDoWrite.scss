@@ -1,0 +1,47 @@
+.writeWrapper {
+  height: 70%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    width: 40%;
+    margin: 0 auto 10px auto;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(245, 245, 220, 0.9);
+  }
+  .writeBox {
+    width: 90%;
+    height: 70%;
+    padding: 30px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    resize: none;
+    font-weight: bold;
+    background-color: rgba(245, 245, 220, 0.9);
+  }
+
+  .addPost {
+    width: 20%;
+    height: 10%;
+    text-align: center;
+    border-radius: 15px;
+    margin: 10px auto;
+    background-color: beige;
+    color: green;
+    font-weight: bold;
+  }
+}
+
+.addPost:hover {
+  transform: scale(1.08);
+  background-color: rgb(252, 252, 156);
+  transition: 0.1s;
+}

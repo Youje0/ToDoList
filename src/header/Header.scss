@@ -1,0 +1,32 @@
+@mixin padding($paddingSize) {
+  padding: $paddingSize;
+}
+
+.header {
+  height: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  font-weight: bold;
+
+  .timer {
+    @include padding(30px);
+    margin-right: 30px;
+  }
+  .appName {
+    font-size: 2rem;
+
+    @include padding(20px);
+  }
+  .currentState {
+    @include padding(30px);
+    .dotsBtn {
+      width: 20%;
+      background: url(../../public/asset/image/more.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

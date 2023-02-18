@@ -1,0 +1,111 @@
+@mixin padding($paddingSize) {
+  padding: $paddingSize;
+}
+
+@mixin margin($margin) {
+  margin: $margin;
+}
+
+@mixin footerIconImageSetting($width, $height, $bgColor) {
+  width: $width;
+  height: $height;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bgColor;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  // border: 1px solid black;
+  background-color: #303030;
+  // background-color: white;
+  color: white;
+  overflow: hidden;
+
+  .mainWrapper {
+    width: 40%;
+    height: 100%;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: url("https://i.pinimg.com/originals/a5/53/0f/a5530f4f97cae8cafbb5fe1b4af183cb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .contentBox {
+      height: 70%;
+      @include padding(40px);
+
+      .contentBoxGrid {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+    }
+
+    .footerWrapper {
+      width: 100%;
+      height: 12%;
+      display: flex;
+      justify-content: center;
+      .footer {
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+        @include padding(15px);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+
+        .footerIconBox {
+          width: 5rem;
+          height: 5rem;
+          margin: 0 auto;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .plusIconImage {
+            @include footerIconImageSetting(100%, 100%, #60f651);
+          }
+
+          .trashCanIconImage {
+            @include footerIconImageSetting(100%, 100%, white);
+          }
+          .doneIconImage {
+            @include footerIconImageSetting(100%, 100%, #bababa);
+          }
+          .inProgressIconImage {
+            @include footerIconImageSetting(100%, 100%, yellow);
+          }
+        }
+      }
+    }
+  }
+}
+
+.plusIconImage:hover {
+  transform: scale(1.15);
+  transition: 0.1s;
+}
+
+.trashCanIconImage:hover {
+  transform: scale(1.15);
+  transition: 0.1s;
+}
+
+.doneIconImage:hover {
+  transform: scale(1.15);
+  transition: 0.1s;
+}
+
+.inProgressIconImage:hover {
+  transform: scale(1.15);
+  transition: 0.1s;
+}
