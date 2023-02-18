@@ -1,6 +1,6 @@
 import React from "react";
 
-function inProgress() {
+function inProgressIcon() {
   return (
     <div className="footerIconBox">
       <img
@@ -12,4 +12,4 @@ function inProgress() {
   );
 }
 
-export default inProgress;
+export default inProgressIcon;

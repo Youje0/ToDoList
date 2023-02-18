@@ -25,7 +25,7 @@
   overflow: hidden;
 
   .mainWrapper {
-    width: 40%;
+    width: 35%;
     height: 100%;
     border-radius: 25px;
     margin: 0 auto;
@@ -44,6 +44,25 @@
         grid-template-rows: repeat(6, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
+        .toDoBox {
+          width: 6rem;
+          height: 6rem;
+          margin: 0 auto;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: beige;
+
+          .toDoBoxImage {
+            border: none;
+            padding: 10px;
+            border-radius: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+          }
+        }
       }
     }
 
@@ -76,10 +95,10 @@
           }
 
           .trashCanIconImage {
-            @include footerIconImageSetting(100%, 100%, white);
+            @include footerIconImageSetting(100%, 100%, #26a3da);
           }
           .doneIconImage {
-            @include footerIconImageSetting(100%, 100%, #bababa);
+            @include footerIconImageSetting(100%, 100%, white);
           }
           .inProgressIconImage {
             @include footerIconImageSetting(100%, 100%, yellow);
@@ -108,4 +127,81 @@
 .inProgressIconImage:hover {
   transform: scale(1.15);
   transition: 0.1s;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    // border: 1px solid black;
+    background-color: #303030;
+    // background-color: white;
+    color: white;
+    overflow: hidden;
+
+    .mainWrapper {
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      margin: 0 auto;
+      background: url("https://i.pinimg.com/originals/a5/53/0f/a5530f4f97cae8cafbb5fe1b4af183cb.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .contentBox {
+        height: 70%;
+        @include padding(40px);
+
+        .contentBoxGrid {
+          height: 100%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          grid-column-gap: 10px;
+          grid-row-gap: 10px;
+        }
+      }
+
+      .footerWrapper {
+        width: 100%;
+        height: 12%;
+        display: flex;
+        justify-content: center;
+        .footer {
+          width: 90%;
+          height: 90%;
+          border-radius: 20px;
+          background-color: rgba(0, 0, 0, 0.2);
+          @include padding(15px);
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          align-items: center;
+
+          .footerIconBox {
+            width: 5rem;
+            height: 5rem;
+            margin: 0 auto;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .plusIconImage {
+              @include footerIconImageSetting(100%, 100%, #60f651);
+            }
+
+            .trashCanIconImage {
+              @include footerIconImageSetting(100%, 100%, #26a3da);
+            }
+            .doneIconImage {
+              @include footerIconImageSetting(100%, 100%, white);
+            }
+            .inProgressIconImage {
+              @include footerIconImageSetting(100%, 100%, yellow);
+            }
+          }
+        }
+      }
+    }
+  }
 }

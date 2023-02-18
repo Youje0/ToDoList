@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
 
+  animation: 0.3s ease-in-out writeBOx;
+
   .title {
     width: 40%;
     margin: 0 auto 10px auto;
@@ -28,6 +30,10 @@
     background-color: rgba(245, 245, 220, 0.9);
   }
 
+  .writeBox::-webkit-scrollbar {
+    display: none;
+  }
+
   .addPost {
     width: 20%;
     height: 10%;
@@ -44,4 +50,21 @@
   transform: scale(1.08);
   background-color: rgb(252, 252, 156);
   transition: 0.1s;
+}
+
+@keyframes writeBOx {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

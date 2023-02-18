@@ -1,14 +1,13 @@
 import React from "react";
-import "./toDoBox.scss";
 
-function toDoBox() {
+function donePage() {
   return (
     <div className="toDoBox">
       <div className="toDoBoxImage">
-        <span>간단한 설명을 해주세요.</span>
+        <span>Done</span>
       </div>
     </div>
   );
 }
 
-export default toDoBox;
+export default donePage;
